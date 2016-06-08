@@ -1,0 +1,13 @@
+@import 'reset.scss';
+@import 'mixins.scss';
+@import 'extenders.scss';
+@import 'containers.scss';
+@import 'modal.scss';
+@import 'unic.scss';
+body {
+	font-family: "Roboto", sans-serif;
+}
+::-webkit-input-placeholder {opacity: 1;}
+::-moz-placeholder          {opacity: 1;}/* Firefox 19+ */
+:-moz-placeholder           {opacity: 1;}/* Firefox 18- */
+:-ms-input-placeholder      {opacity: 1;}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Nerds
+		link(rel="stylesheet", href="css/normalize.css")
+		link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css')
+		link(rel="stylesheet", href="css/style.css")
+	body
+		header.main-header
+			.container.main-header__item
+				a(href="index.html").logo.main-header__item--logo
+					img(src="img/nerds-logo.png" alt="Nerds")
+				ul(id="navigation").nav
+					li.nav__item
+						a(href="#") Студия
+					li.nav__item
+						a(href="#")	Клиенты
+					li.nav__item.nav__item--active
+						a(href="shop.html") Магазин
+					li.nav__item
+						a(href="#") Контакты
+					li.nav__item.nav__item--basket
+						a(href="#") Корзина
+		main
+			.jambotron
+				.container Добро пожаловать в магазин<br> готовых макетов
+			.container.catalog-content
+				form.filters-column
+					.filters-column__item--title Стоимость:
+					.range-filter
+						.range-filter__item.range-block
+							.scale
+								.bar
+								.toggle.toggle-min
+								.toggle.toggle-max
+						.range-filter__item.flex-just
+							label(for="min-price") От
+							input(type="text" id="min-price" placeholder="0").range-input
+							label(for="max-price") До
+							input(type="text" id="max-price" placeholder="15000").range-input
+					.filters-column__item--title Сетка:
+					.radio-block
+						input(type="radio" id="adaptive" name="layout" disabled)
+						label(for="adaptive").radio-btn Адаптивная
+						input(type="radio" id="fixed" name="layout")
+						label(for="fixed").radio-btn Фиксированная
+						input(type="radio" id="flexible" name="layout")
+						label(for="flexible").radio-btn Резиновая
+					.filters-column__item--title Особенности:
+					.checkbox-block
+						input(type="checkbox" id="slider")
+						label(for="slider").checkbox Слайдер
+						input(type="checkbox" id="features")
+						label(for="features").checkbox Блок преимуществ
+						input(type="checkbox" id="news")
+						label(for="news").checkbox Новости
+						input(type="checkbox" id="gallery")
+						label(for="gallery").checkbox Галерея
+						input(type="checkbox" id="basket" disabled)
+						label(for="basket").checkbox Корзина
+					input(type="submit" value="показать")#show-result
+				div.catalog-result
+					ul.sort-line
+						li.sort-line__item.sort-line__item--sort-by Сортировать:
+						li.sort-line__item
+							a(href="#") По цене
+						li.sort-line__item.active-sort 
+							a(href="#") По типу
+						li.sort-line__item 
+							a(href="#") По функционалу
+						li.sort-line__item.sort-line__item--direction
+							button(type="button").dir.down-dir.active-dir
+							button(type="button").dir.up-dir
+					.catalog-grid
+						article.catalog-grid__item
+							img(src="img/aviator.jpg" alt="Aviator")
+							.item-info
+								h1.item-info__item--title Aviator
+								p.item-info__item--description Одностраничный макет с авторским дизайном
+								a.item-info__item--price 8000 р.
+						article.catalog-grid__item
+							img(src="img/sunset.jpg" alt="Sunset")
+							.item-info
+								h1.item-info__item--title Sunset
+								p.item-info__item--description Интернет-магазин <br>с личным кабинетом
+								a.item-info__item--price 10000 р.
+						article.catalog-grid__item
+							img(src="img/forte.jpg" alt="Forte")
+							.item-info
+								h1.item-info__item--title Forte
+								p.item-info__item--description Отличный макет<br> для личного блога
+								a.item-info__item--price 5000 р.
+						article.catalog-grid__item
+							img(src="img/modern-thai.jpg" alt="Modern Organic Thai")
+							.item-info
+								h1.item-info__item--title Modern Organic Thai
+								p.item-info__item--description Сайт для ресторана быстрого питания
+								a.item-info__item--price 12000 р.
+						article.catalog-grid__item
+							img(src="img/avenue.jpg" alt="Avenue")
+							.item-info
+								h1.item-info__item--title Avenue
+								p.item-info__item--description Макет для блога<br> о путешествиях
+								a.item-info__item--price 8000 р.
+						article.catalog-grid__item
+							img(src="img/sunset.jpg" alt="Sunset")
+							.item-info
+								h1.item-info__item--title Dovetail
+								p.item-info__item--description Интернет-магазин <br>с галереей товаров
+								a.item-info__item--price 14000 р.
+					.pagination
+						a(href="#").pagination__item.pagination__item--active 1
+						a(href="#").pagination__item 2
+						a(href="#").pagination__item 3
+						a(href="#").pagination__item.pagination__item--next Следующая	 
+		footer.main-footer
+			.map
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123861!2d30.320894615974638!3d59.93879686904812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1465033655498"></iframe>
+				.container
+					.map__contacts
+						.map__contacts--title NЁRDS DESIGN STUDIO
+						.map__contacts--adress 191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8
+						.map__contacts--phone тел. +7 (812) 275-75-75
+						a.map__contacts--write-us#form-show Напишите нам
+			.primary-footer
+				.container
+					section.footer-social
+						a(href="#").footer-social__item.footer-social__item--vk
+						a(href="#").footer-social__item.footer-social__item--fc
+						a(href="#").footer-social__item.footer-social__item--inst
+					section.footer-info
+						b.footer-info__item.footer-info__item--title Давайте дружить, это выгодно!
+						p.footer-info__item.footer-info__item--description Скидка 10% для друзей из социальных сетей.
+		div#overlay
+		div.write-us#write-us
+			button#close-form
+			form
+				.write-us__item--row
+					.write-us__item.write-us__item--name
+						label(for="name") Ваше имя:
+						input(type="text" id="name" placeholder="Представьтесь, пожалуйста").field
+					.write-us__item.write-us__item--email
+						label(for="email") Ваш e-mail:
+						input(type="text" id="email" placeholder="Для отправки ответа").field
+				.write-us__item.write-us__item--message
+					label(for="message") Текст письма:
+					textarea(id="message" placeholder="В свободной форме").field
+				input(type="submit" value="Отправить").write-us__item.write-us__item--btn
+		script(src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous")
+		script(src="js/script.js" type="text/javascript")

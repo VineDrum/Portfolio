@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Техномарт
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel="stylesheet", href="css/style.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	body
+		header.primary-header
+			div.main-header
+				div.container
+					ul.functional_bar
+						li.functional_bar__item.functional_bar__item--logo 
+							a(href="index.html") Техномарт
+						li.functional_bar__item.functional_bar__item--search
+							input(type="text" placeholder="Поиск" id="search")
+						li.functional_bar__item.functional_bar__item--bookmarks
+							a(href="#" id="bookmarks-counter")	Закладки:&#160;0
+						li.functional_bar__item.functional_bar__item--basket.have-goods
+							a(href="#" id="basket-counter")	Корзина:&#160;3
+						li.functional_bar__item.functional_bar__item--pay_order
+							a(href="#") Оформить&#160;заказ
+			div.sub-header
+				div.container
+					div.header-info
+						div.header-info__item
+							p.site-basic Интернет-магазин строительных материалов <br> и инструментов для ремонта
+						div.header-info__item.header-info__item--contacts
+							div.phone-number +7 (812) 555-05-55
+							div.adress г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+						div.header-info__item.header-info__item_login-group
+							a(href="#").login-btn.enter Войти
+							a(href="#").login-btn Регистрация
+					nav.navbar				
+						ul.nav
+							li.nav__item
+								a(href="index.html") Главная
+							li.nav__item
+								a(href="#") Компания
+							li.nav__item
+								a(href="catalog.html") Каталог
+							li.nav__item
+								a(href="#") Новости
+							li.nav__item
+								a(href="#") Спецпредложения
+							li.nav__item
+								a(href="#") Доставка
+							li.nav__item
+								a(href="#") Контакты
+		main.index-main
+			div.container
+				.features
+					.features__item.features__item--staff.new
+						h2.card-title Материалы
+						a(href="#").atention На любой вкус
+					.features__item.features__item--tools
+						h2.card-title Инструмент
+						a(href="#").atention На все случаи
+					.features__item.features__item--tehno
+						h2.card-title Техника
+						a(href="#").atention Для стройки
+				.slider-group
+					.slider
+						.slider__item.slider__item--slide-1(id="slide-1")
+							h2.slide-title Перфораторы
+							div.slide-tagline Настоящие мужские игрушки
+							a(href="#").open-catalog Окрыть каталог
+						.slider__item.slider__item--slide-2(id="slide-2")
+							h2.slide-title Дрели
+							div.slide-tagline Соседям на радость!
+							a(href="#").open-catalog Окрыть каталог
+					
+					.features.f-cl
+						.features__item.features__item--discont
+							h2.card-title Скидки 50%
+							a(href="#").atention На 350 товаров
+						.features__item.features__item--delivery
+							h2.card-title Доставка
+							a(href="#").atention Бесплатно
+				div.good-section
+					h2.section-title Популярные товары
+					a.title-btn Все популярные товары
+				.catalog-grid 
+					div(id="card-added").cart-added
+						button#close-added
+						div.greatings
+							button(type="button" value="ok")#apply
+							span Товар добавлен в корзину!
+						div.next-actions
+							a(href="#") Оформить заказ
+							button(type="button" id="cont-buy") Продолжить покупки
+					article.catalog-grid__item
+						div.catalog-grid__item--actions
+							a(href="#").buy Купить
+							a(href="#").bookmark В закладки
+						div.catalog-grid__item--img
+							img(src="img/bfg-9000.jpg", alt="BOSH BFG 9000" width="184" height="164")
+						h1.catalog-grid__item--title Перфоратор BOSCH BFG 9000
+						div.catalog-grid__item--discount 32500 Р.
+						div.catalog-grid__item--price 25500 Р.
+					article.catalog-grid__item
+						div.catalog-grid__item--actions
+							a(href="#").buy Купить
+							a(href="#").bookmark В закладки
+						div.catalog-grid__item--img
+							img(src="img/bfg-3000.jpg", alt="BOSH BFG 3000" width="127" height="112")
+						h1.catalog-grid__item--title Перфоратор BOSCH BFG 3000
+						div.catalog-grid__item--discount 22500 Р.
+						div.catalog-grid__item--price 15500 Р.
+					article.catalog-grid__item
+						div.catalog-grid__item--actions
+							a(href="#").buy Купить
+							a(href="#").bookmark В закладки
+						div.catalog-grid__item--img
+							img(src="img/bfg-6000.jpg", alt="BOSH BFG 6000" width="144" height="128")
+						h1.catalog-grid__item--title Перфоратор BOSCH BFG 6000
+						div.catalog-grid__item--discount 30500 Р.
+						div.catalog-grid__item--price 25500 Р.
+					article.catalog-grid__item.new
+						div.catalog-grid__item--actions
+							a(href="#").buy Купить
+							a(href="#").bookmark В закладки
+						div.catalog-grid__item--img
+							img(src="img/bfg-2000.jpg", alt="BOSH BFG 2000" width="127" height="112")
+						h1.catalog-grid__item--title Перфоратор BOSCH BFG 2000
+						div.catalog-grid__item--discount
+						div.catalog-grid__item--price 12500 Р.
+				div.good-section
+					h2.section-title Популярные производители
+					a.title-btn Все производители
+				div.manufacturers
+					a(href="#").manufacturers__item
+						img(src="img/bosch.png" alt="Bosh" width="126" height="37")
+					a(href="#").manufacturers__item
+						img(src="img/makita.png" alt="Makita" width="123" height="40")
+					a(href="#").manufacturers__item
+						img(src="img/dewalt.png" alt="DeWalt" width="146" height="44")
+					a(href="#").manufacturers__item
+						img(src="img/interscol.png" alt="InterScol" width="200" height="88")
+					a(href="#").manufacturers__item
+						img(src="img/hitachi.png" alt="Hitachi" width="169" height="31")
+					a(href="#").manufacturers__item
+						img(src="img/lg.png" alt="LG" width="121" height="73")
+					a(href="#").manufacturers__item
+						img(src="img/aeg.png" alt="AEG" width="151" height="96")
+					a(href="#").manufacturers__item
+						img(src="img/metabo.png" alt="Metabo" width="204" height="69")
+			.presentation-block
+				.container
+					.services
+						input(type="radio" name="services" id="delivery" checked)
+						input(type="radio" name="services" id="garanty")
+						input(type="radio" name="services" id="credit")
+						.control-block
+							h2.services__item.services__item--title Сервисы
+							p.services__item.services__item--description  Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+							div.services__item.services__item--navigation
+								label(for="delivery") Доставка
+								label(for="garanty") Гарантия
+								label(for="credit") Кредит
+							.slides
+								.slide#delivery-slide
+									h3.slide__item.slide__item--title Доставка
+									p.slide__description.slide__item--description Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
+								.slide#garanty-slide
+									h3.slide__item.slide__item--title Гарантия
+									p.slide__description.slide__item--description Если купленный у нас товар поломается или заискрит,<br>а также в случае пожара, спровоцированного его возгаранием,<br>  вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br> сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.
+								.slide#credit-slide
+									h3.slide__item.slide__item--title Кредит
+									p.slide__description.slide__item--description Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.
+									a(href="#").slide__item.slide__item--btn Отправить заявку
+			.about
+				.container
+					.info
+						h2.info__item.info__item--title Компания «техномарт»
+						p.info__item.info__item--description Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br> строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.
+						p.info__item.info__item--description Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:
+						ul.info__item.info__item--list
+							li Деловые линии
+							li Автотрейдинг
+							li ЖелДорЭкспедиция
+						a(href="#").info__item.info__item--btn Подробнее о компании
+					.contacts
+						h2.contacts__item.contacts__item--title Контакты
+						p.contacts__item.contacts__item--description Вы можете забрать товар сами,<br> заехав в наш офис:
+						div.contacts__item.contacts__item--mini-map
+						a(href="#" id="map-button").contacts__item.contacts__item--map-btn Заблудились? Напишите нам!
+						// modal
+						.map-popup
+							button#close-map
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6497657132389!2d30.32253612925301!3d59.93879487065992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1464525085782" allowfullscreen></iframe>
+		footer.main-footer
+			.footer-navbar
+				.container
+					.footer-info
+						a.footer-info__item.footer-info__item--logo Техномарт
+						.footer-info__item.footer-info__item--adress г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>+7 (812) 555-05-55
+					.footer-navigation
+						ul.footer-navigation__item
+							li
+								a(href="#").footer-navigation__item--link Компания
+							li
+								a(href="#").footer-navigation__item--link Новости
+							li
+								a(href="#").footer-navigation__item--link Каталог
+							li
+								a(href="#").footer-navigation__item--link Доставка
+							li
+								a(href="#").footer-navigation__item--link Контакты
+						ul.footer-navigation__item.footer-navigation__item--golden
+							li
+								a(href="#").footer-navigation__item--link Материалы
+							li
+								a(href="#").footer-navigation__item--link Техника
+							li
+								a(href="#").footer-navigation__item--link Инструмент
+							li
+								a(href="#").footer-navigation__item--link Спецпредложения
+			.footer-standart
+				.container
+					section.copyright © 2010–2016 Компания «Техномарт»<br>Все права защищены
+					section.social
+						a(href="#").social-btn.social-vk
+						a(href="#").social-btn.social-facebook
+						a(href="#").social-btn.social-inst
+					section.extra-links
+						.extra-links__item Обратная связь:<br>
+							a(href="#").extra-links__item--link mail@htmlacademy.ru
+						.extra-links__item Разработано -<br> 
+							a(href="#").extra-links__item--link htmlacademy.ru
+		script(src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous")
+		script(src="js/script.js" type="text/javascript")
+				

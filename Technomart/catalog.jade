@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Каталог
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel="stylesheet", href="css/style.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	body.inner-page
+		header.primary-header
+			div.main-header
+				div.container
+					ul.functional_bar
+						li.functional_bar__item.functional_bar__item--logo 
+							a(href="index.html") Техномарт
+						li.functional_bar__item.functional_bar__item--search
+							input(type="text" placeholder="Поиск" id="search")
+						li.functional_bar__item.functional_bar__item--bookmarks
+							a(href="#" id="bookmarks-counter")	Закладки:&#160;0
+						li.functional_bar__item.functional_bar__item--basket.have-goods
+							a(href="#" id="basket-counter")	Корзина:&#160;3
+						li.functional_bar__item.functional_bar__item--pay_order
+							a(href="#") Оформить&#160;заказ
+			div.sub-header
+				div.container
+					div.header-info
+						div.header-info__item
+							p.site-basic Интернет-магазин строительных материалов <br> и инструментов для ремонта
+						div.header-info__item.header-info__item--contacts
+							div.phone-number +7 (812) 555-05-55
+							div.adress г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+						div.header-info__item.header-info__item_login-group
+							a(href="#").login-btn.enter Войти
+							a(href="#").login-btn Регистрация
+					nav.navbar				
+						ul.nav
+							li.nav__item
+								a(href="index.html") Главная
+							li.nav__item
+								a(href="#") Компания
+							li.nav__item
+								a(href="index.html") Каталог
+							li.nav__item
+								a(href="#") Новости
+							li.nav__item
+								a(href="#") Спецпредложения
+							li.nav__item
+								a(href="#") Доставка
+							li.nav__item
+								a(href="#") Контакты
+		main
+			.container
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a(href="index.html")
+							img(src="img/icon-home.png" alt="Главная")
+					li.breadcrumbs__item
+						a(href="#") Каталог
+					li.breadcrumbs__item
+						a(href="#") Инструмент
+					li.breadcrumbs__item
+						a(href="#") Перфораторы
+				h1.catalog-section Перфораторы
+				.catalog-content
+					.filter-column
+						div.column-title Фильтр:
+						form.filters-form
+							fieldset.filters-set
+								.set-title Цена:
+								.range-filter
+									.scale
+										.bar
+										.toggle.toggle-min
+										.toggle.toggle-max
+								.output
+									input(type="text" value="0").range-output
+									.slash
+									input(type="text" value="30000").range-output
+							fieldset.filters-set.checkbox-set
+								div.set-title Производители:
+								input(type="checkbox" id="bosh" disabled)
+								label(for="bosh") Bosh
+								input(type="checkbox" id="inter")
+								label(for="inter") Интерскол
+								input(type="checkbox" id="makita")
+								label(for="makita") Makita
+								input(type="checkbox" id="dewalt")
+								label(for="dewalt") dewalt
+								input(type="checkbox" id="hitachi")
+								label(for="hitachi") hitachi
+							fieldset.filters-set.radio-set
+								div.set-title Питание:
+								input(type="radio" id="battery" name="type")
+								label(for="battery") Аккумуляторные
+								input(type="radio" id="web" name="type" disabled)
+								label(for="web") Сетевые
+								input(type="submit" value="Показать").show-btn
+					.catalog-result
+						ul.sort-line
+							li.sort-line__item Сортировка:
+							li.sort-line__item
+								a(href="#") По цене
+							li.sort-line__item
+								a(href="#") По типу
+							li.sort-line__item
+								a(href="#") По функционалу
+							li.sort-line__item.sort-line__item--direction
+								button(type="button").up-dir
+								button(type="button").down-dir.unactive-dir
+						.catalog-grid
+							div(id="card-added").cart-added
+								button#close-added
+								div.greatings
+									button(type="button" value="ok")#apply
+									span Товар добавлен в корзину!
+								div.next-actions
+									a(href="#") Оформить заказ
+									button(type="button" id="cont-buy") Продолжить покупки
+							article.catalog-grid__item
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-3000.jpg", alt="BOSH BFG 3000" width="127" height="112")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 3000
+								div.catalog-grid__item--discount 22500 Р.
+								div.catalog-grid__item--price 15500 Р.	
+							article.catalog-grid__item
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-6000.jpg", alt="BOSH BFG 6000" width="144" height="128")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 6000
+								div.catalog-grid__item--discount 30500 Р.
+								div.catalog-grid__item--price 25500 Р.
+							article.catalog-grid__item.new
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-2000.jpg", alt="BOSH BFG 2000" width="127" height="112")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 2000
+								div.catalog-grid__item--discount
+								div.catalog-grid__item--price 12500 Р.
+							article.catalog-grid__item
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-3000.jpg", alt="BOSH BFG 3000" width="127" height="112")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 3000
+								div.catalog-grid__item--discount 22500 Р.
+								div.catalog-grid__item--price 15500 Р.	
+							article.catalog-grid__item.new
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-6000.jpg", alt="BOSH BFG 6000" width="144" height="128")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 6000
+								div.catalog-grid__item--discount 30500 Р.
+								div.catalog-grid__item--price 25500 Р.
+							article.catalog-grid__item
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-2000.jpg", alt="BOSH BFG 2000" width="127" height="112")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 2000
+								div.catalog-grid__item--discount
+								div.catalog-grid__item--price 12500 Р.
+							article.catalog-grid__item.new
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-3000.jpg", alt="BOSH BFG 3000" width="127" height="112")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 3000
+								div.catalog-grid__item--discount 22500 Р.
+								div.catalog-grid__item--price 15500 Р.	
+							article.catalog-grid__item
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-6000.jpg", alt="BOSH BFG 6000" width="144" height="128")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 6000
+								div.catalog-grid__item--discount 30500 Р.
+								div.catalog-grid__item--price 25500 Р.
+							article.catalog-grid__item
+								div.catalog-grid__item--actions
+									a(href="#").buy Купить
+									a(href="#").bookmark В закладки
+								div.catalog-grid__item--img
+									img(src="img/bfg-2000.jpg", alt="BOSH BFG 2000" width="127" height="112")
+								h1.catalog-grid__item--title Перфоратор BOSCH BFG 2000
+								div.catalog-grid__item--discount
+								div.catalog-grid__item--price 12500 Р.
+						.pagination
+							a(href="#").pagination__item.pagination__item--active 1
+							a(href="#").pagination__item 2
+							a(href="#").pagination__item 3
+							a(href="#").pagination__item Следующая
+		.catalog-description
+			.container
+				h2.catalog-description__item--title Пара слов о перфораторах
+				p.catalog-description__item--paragraph Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В<br> ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.			
+		footer.main-footer
+			.footer-navbar
+				.container
+					.footer-info
+						a.footer-info__item.footer-info__item--logo Техномарт
+						.footer-info__item.footer-info__item--adress г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>+7 (812) 555-05-55
+					.footer-navigation
+						ul.footer-navigation__item
+							li
+								a(href="#").footer-navigation__item--link Компания
+							li
+								a(href="#").footer-navigation__item--link Новости
+							li
+								a(href="#").footer-navigation__item--link Каталог
+							li
+								a(href="#").footer-navigation__item--link Доставка
+							li
+								a(href="#").footer-navigation__item--link Контакты
+						ul.footer-navigation__item.footer-navigation__item--golden
+							li
+								a(href="#").footer-navigation__item--link Материалы
+							li
+								a(href="#").footer-navigation__item--link Техника
+							li
+								a(href="#").footer-navigation__item--link Инструмент
+							li
+								a(href="#").footer-navigation__item--link Спецпредложения
+			.footer-standart
+				.container
+					section.copyright © 2010–2016 Компания «Техномарт»<br>Все права защищены
+					section.social
+						a(href="#").social-btn.social-vk
+						a(href="#").social-btn.social-facebook
+						a(href="#").social-btn.social-inst
+					section.extra-links
+						.extra-links__item Обратная связь:<br>
+							a(href="#").extra-links__item--link mail@htmlacademy.ru
+						.extra-links__item Разработано -<br> 
+							a(href="#").extra-links__item--link htmlacademy.ru
+		script(src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous")
+		script(src="js/script.js" type="text/javascript")
+		
